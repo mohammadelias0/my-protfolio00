@@ -7,3 +7,97 @@
 body{
     font-family: bold; 
 }
+
+nav{
+    display: flex;
+    background-color: #41099b;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 80px;
+}
+.logo{
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(249, 242, 251);
+}
+  nav ul{
+    display: flex;
+  }
+
+nav ul li{
+    list-style-type: none;
+    margin: 0 8px;
+    margin-right: 20px;
+}  
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(228, 235, 241);
+    padding: 0px 10px;
+    border-radius: 3px;
+    transition: 0.5s;
+
+}
+
+nav ul li a:hover{
+    color: #07df4f;
+    /* background-color: #07df4f; */
+}
+
+.menu_b{
+    display: none;
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+#click{
+    display: none;
+}
+
+/* respoce start */
+@media only screen and (max-width: 940px) {
+    .menu_b{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        background-color: #201c1c;
+        height: 100vh;
+        width: 100%;
+        padding-top: 20px;
+        flex-direction: column;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    nav ul li{
+        margin: 50px 0;
+    }
+    nav ul li a{
+        font-size: 22px;
+    };
+
+    nav ul li a:hover{
+        background: none;
+        color: red;
+    }
+    
+}
+
+header{
+    background-image: url(images/ing.gpj.png);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
